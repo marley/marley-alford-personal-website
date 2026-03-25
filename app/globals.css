@@ -3,13 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --seaweed: #06a77d;
+  --golden-orange: #f1a208;
+  --golden-sand: #d5c67a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-seaweed: var(--seaweed);
+  --color-golden-orange: var(--golden-orange);
+  --color-golden-sand: var(--golden-sand);
+  --font-sans: var(--font-noto-sans);
+  --font-mono: var(--font-noto-sans-mono);
 }
 
 @media (prefers-color-scheme: dark) {
