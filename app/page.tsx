@@ -4,7 +4,7 @@ import TabSection from "./tab-section/page";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-full font-sans">
+    <div className="flex flex-col h-full">
       <Hero />
       <TabSection />
       <TabSection />
