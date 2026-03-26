@@ -3,21 +3,21 @@ import { useState } from "react";
 
 interface ChainTextProps {
   content: string;
-  nextString: string;
+  nextContent: string;
 }
 
-export default function ChainText({ content, nextString }: ChainTextProps) {
+export default function ChainText({ content, nextContent }: ChainTextProps) {
   const [text, setText] = useState<string>("");
 
   return (
     <>
       <button
         className="font-bold cursor-pointer"
-        onClick={() => setText(` ${nextString}`)}
+        onClick={() => setText(` ${nextContent}`)}
       >
         {content}
       </button>
-      {text}
+      <span dangerouslySetInnerHTML={{ __html: text }}></span>
     </>
   );
 }

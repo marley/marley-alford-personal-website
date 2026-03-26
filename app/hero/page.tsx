@@ -9,12 +9,17 @@ export default function Hero() {
         since 2017.`;
   return (
     <div className="h-screen flex flex-col justify-between">
-      <span className="text-3xl">
+      <div className="text-3xl">
         Hi, my name is Marley. I have{" "}
         <a href="https://www.linkedin.com/in/marleyalford/" target="_blank">
           worked in tech
         </a>{" "}
-        since 2017. Sometimes I also{" "}
+        since{" "}
+        <ChainText
+          content="2017"
+          nextContent={`after an inspiring summer at <a href="https://hackny.org/" target="_blank">hackNY</a>`}
+        />
+        . Sometimes I also{" "}
         <a
           href="https://www.linkedin.com/posts/marleyalford_ive-been-teaching-intro-web-dev-with-frauenloop-share-7266847502950170625-ZIgN?utm_source=share&utm_medium=member_desktop&rcm=ACoAABgCsPMB_GB8ATVdsSDiUi0JSRA3BcMojQE"
           target="_blank"
@@ -26,11 +31,13 @@ export default function Hero() {
           ohr.fm
         </a>
         .{" "}
-        <ChainText
-          content="Contact me"
-          nextString="about freelance projects, exciting tech for good initiatives, or cool open source tools."
-        />
-      </span>
+        <p>
+          <ChainText
+            content="Contact me"
+            nextContent="about freelance projects, exciting tech for good initiatives, or cool open source tools."
+          />
+        </p>
+      </div>
       <Ticker />
     </div>
   );
