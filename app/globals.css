@@ -38,9 +38,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --seaweed: #06a77d;
+  --background: #94849b;
+  --foreground: #2e3532;
+  --pale-slate: #c7cedb;
+  --dusty-olive: #7e9181;
+  --cool-steel: #a0aab2;
   --golden-orange: #f1a208;
   --golden-sand: #d5c67a;
 }
@@ -55,8 +57,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #2e3532;
+    --foreground: var(--pale-slate);
   }
 }
 
@@ -66,13 +68,21 @@ body {
   font-family: "Mplus1", sans-serif;
 }
 
+#main {
+  padding: 2em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
 a {
   font-weight: 700;
 }
 
 a:hover {
-  color: black;
-  background: white;
+  color: var(--background);
+  background: var(--foreground);
 }
 
 #ticker {
