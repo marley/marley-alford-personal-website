@@ -4,7 +4,7 @@ import Ticker from "./ui/ticker";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col md:h-screen justify-between">
       <div>
         <Hero />
         <FractalTiles />

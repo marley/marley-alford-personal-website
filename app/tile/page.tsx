@@ -18,8 +18,8 @@ export default function Tile({
   return (
     <div
       className={cn(
-        "border border-foreground h-full w-full flex justify-center items-center",
-        `pointer-cursor text-background ${hoverBg} ${hoverColor}`,
+        "border border-foreground h-full w-full flex justify-center items-center text-center",
+        `pointer-cursor text-foreground md:text-background ${hoverBg} ${hoverColor}`,
         className,
       )}
     >
