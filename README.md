@@ -30,3 +30,4 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
   - Speaking of fonts, I used [Mplus1](https://github.com/coz-m/MPLUS_FONTS) for the body and [Meyrin](https://github.com/optional-is/Meyrin) for the marquee :)
 - [How to render a string containing html elements.](https://stackoverflow.com/a/39758631/9222529)
 - Fractal tile layout created thanks to [CSS Grid Generator](https://cssgridgenerator.io/) by Kristjan Retter.
+- Open source, non-personal data tracking website analytics with [GoatCounter](https://www.goatcounter.com/).
