@@ -16,16 +16,15 @@ export default function Tile({
   className = "",
 }: TileProps) {
   return (
-    <div
-      className={cn(
-        "border border-foreground h-full w-full flex justify-center items-center text-center",
-        `pointer-cursor text-foreground md:text-background ${hoverBg} ${hoverColor}`,
-        className,
-      )}
-    >
-      <a href={link} target="_blank" rel="noreferrer">
+    <a href={link} className={className} target="_blank" rel="noreferrer">
+      <div
+        className={cn(
+          "border border-foreground h-full w-full flex justify-center items-center text-center",
+          `pointer-cursor text-foreground md:text-background ${hoverBg} ${hoverColor}`,
+        )}
+      >
         {phrase}
-      </a>
-    </div>
+      </div>
+    </a>
   );
 }

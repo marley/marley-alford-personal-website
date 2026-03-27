@@ -2,7 +2,7 @@ import Tile from "../tile/page";
 
 export default function FractalTiles({}) {
   return (
-    <div className={`parent h-full w-full flex justify-around`}>
+    <div className={`parent h-full w-full flex justify-around mb-5`}>
       <Tile
         className="div3"
         link="https://www.linkedin.com/in/marleyalford/"
