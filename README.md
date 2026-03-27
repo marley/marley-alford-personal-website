@@ -28,6 +28,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - Marquee created using [react-fast-marquee](https://www.react-fast-marquee.com/) by Justin Chu.
 - [How to add a non-google Open Source font](https://stackoverflow.com/a/75086906/9222529) to your project. Note the [new syntax](https://stackoverflow.com/questions/74607996/.how-to-add-custom-local-fonts-to-a-nextjs-13-tailwind-project/75086906#comment134110743_75086906) for importing!
   - Speaking of fonts, I used [Mplus1](https://github.com/coz-m/MPLUS_FONTS) for the body and [Meyrin](https://github.com/optional-is/Meyrin) for the marquee :)
-- [How to render a string containing html elements.](https://stackoverflow.com/a/39758631/9222529)
-- Fractal tile layout created thanks to [CSS Grid Generator](https://cssgridgenerator.io/) by Kristjan Retter.
-- Open source, non-personal data tracking website analytics with [GoatCounter](https://www.goatcounter.com/).
+- [How to render a string containing html elements](https://stackoverflow.com/a/39758631/9222529)
+- Fractal tile layout created thanks to [CSS Grid Generator](https://cssgridgenerator.io/) by Kristjan Retter
+- [Github pages deploy template](https://github.com/nextjs/deploy-github-pages/tree/main)
+- Open source, non-personal data tracking website analytics with [GoatCounter](https://www.goatcounter.com/)
