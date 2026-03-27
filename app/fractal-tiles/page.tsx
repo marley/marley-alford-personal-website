@@ -5,7 +5,7 @@ export default function FractalTiles({}) {
     <div className={`parent h-full w-full flex justify-around`}>
       <Tile
         className="div3"
-        link="https://www.linkedin.com/in/marleyalford/overlay/contact-info/"
+        link="https://www.linkedin.com/in/marleyalford/"
         phrase="Contact"
       />
       <Tile

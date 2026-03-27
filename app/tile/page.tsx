@@ -23,7 +23,9 @@ export default function Tile({
         className,
       )}
     >
-      <a href={link}>{phrase}</a>
+      <a href={link} target="_blank" rel="noreferrer">
+        {phrase}
+      </a>
     </div>
   );
 }
