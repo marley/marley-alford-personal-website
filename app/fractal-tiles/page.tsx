@@ -10,8 +10,8 @@ export default function FractalTiles({}) {
       />
       <Tile
         className="div4"
-        link="https://www.loom.com/share/8c1af3f2adb7453eab6a286815b6a423"
-        phrase="Recent work"
+        link="https://github.com/marley/foqus"
+        phrase="Newest project"
       />
       <Tile
         className="div5"
