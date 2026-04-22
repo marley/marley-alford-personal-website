@@ -1,0 +1,42 @@
+{
+  "duration": 5000,
+  "images": [
+    {
+      "file": "1776734435505.jpg",
+      "caption": "The journey begins..."
+    },
+    {
+      "file": "20260414_162953.jpg",
+      "caption": "Capturing moments that matter"
+    },
+    {
+      "file": "IMG_E0659.jpg",
+      "caption": "Every picture tells a story"
+    },
+    {
+      "file": "PXL_20260414_031919632.jpg",
+      "caption": "Through the lens"
+    },
+    {
+      "file": "PXL_20260414_034750319.jpg",
+      "caption": "A glimpse of beauty"
+    },
+    {
+      "file": "PXL_20260414_045119274.jpg",
+      "caption": "Memories in the making"
+    },
+    {
+      "file": "PXL_20260414_055523693.jpg",
+      "caption": "Life through pixels"
+    },
+    {
+      "file": "PXL_20260414_072555122.jpg",
+      "caption": "Frame by frame"
+    }
+  ],
+  "endScreen": {
+    "title": "The Story Continues...",
+    "body": "Thank you for watching. Click below to experience it again.",
+    "cta": "Start Over"
+  }
+}
