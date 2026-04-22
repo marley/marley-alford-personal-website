@@ -115,6 +115,13 @@ export default function Story() {
     }
   }, [isFinished]);
 
+  const handleClick = useCallback(() => {
+    if (isFinished || isHoldingRef.current) {
+      return;
+    }
+    goToNext();
+  }, [isFinished, goToNext]);
+
   if (!config) {
     return (
       <div className="h-screen w-screen bg-black flex items-center justify-center text-white">
@@ -129,7 +136,7 @@ export default function Story() {
   return (
     <div
       className="h-screen w-screen bg-black relative overflow-hidden cursor-pointer select-none"
-      onClick={isFinished ? undefined : goToNext}
+      onClick={handleClick}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseLeave}
