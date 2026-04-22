@@ -140,10 +140,13 @@ export default function Story() {
                     : index === currentIndex
                       ? "0%"
                       : "0%",
-                animation:
+                animationName:
                   index === currentIndex && !isFinished
-                    ? `progress-fill ${durationSeconds}s linear forwards`
+                    ? "progress-fill"
                     : "none",
+                animationDuration: `${durationSeconds}s`,
+                animationTimingFunction: "linear",
+                animationFillMode: "forwards",
                 animationPlayState: isPaused ? "paused" : "running",
               }}
             />
@@ -156,7 +159,7 @@ export default function Story() {
         <img
           src={`/images/${currentImage.file}`}
           alt={currentImage.caption || `Image ${currentIndex + 1}`}
-          className={`w-full h-full object-cover transition-all duration-500 ${
+          className={`max-h-screen max-w-screen object-contain transition-all duration-500 ${
             isFinished ? "grayscale brightness-50" : ""
           }`}
           draggable={false}
