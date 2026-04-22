@@ -233,22 +233,6 @@ export default function Story() {
         </div>
       )}
 
-      {/* Pause indicator */}
-      {isPaused && !isFinished && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-          <div className="w-16 h-16 rounded-full bg-black/50 flex items-center justify-center">
-            <svg
-              className="w-8 h-8 text-white"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <rect x="6" y="4" width="4" height="16" />
-              <rect x="14" y="4" width="4" height="16" />
-            </svg>
-          </div>
-        </div>
-      )}
-
       {/* CSS for progress animation */}
       <style jsx>{`
         @keyframes progress-fill {
