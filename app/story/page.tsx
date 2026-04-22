@@ -83,25 +83,25 @@ export default function Story() {
     if (!isFinished) {
       setIsPaused(true);
     }
-  }, [isFinished]);
+  }, [isFinished, isPaused]);
 
   const handleMouseUp = useCallback(() => {
     if (!isFinished) {
       setIsPaused(false);
     }
-  }, [isFinished]);
+  }, [isFinished, isPaused]);
 
   const handleTouchStart = useCallback(() => {
     if (!isFinished) {
       setIsPaused(true);
     }
-  }, [isFinished]);
+  }, [isFinished, isPaused]);
 
   const handleTouchEnd = useCallback(() => {
     if (!isFinished) {
       setIsPaused(false);
     }
-  }, [isFinished]);
+  }, [isFinished, isPaused]);
 
   if (!config) {
     return (
