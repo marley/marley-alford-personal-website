@@ -23,8 +23,14 @@ export default function Story() {
   const [isPaused, setIsPaused] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [progressKey, setProgressKey] = useState(0);
+  const [isCaptionExpanded, setIsCaptionExpanded] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const isHoldingRef = useRef(false);
+
+  // Reset caption expanded state when image changes
+  useEffect(() => {
+    setIsCaptionExpanded(false);
+  }, [currentIndex]);
 
   // Fetch configuration
   useEffect(() => {
@@ -207,9 +213,24 @@ export default function Story() {
       {/* Caption */}
       {!isFinished && currentImage.caption && (
         <div className="absolute bottom-20 left-0 right-0 z-10 px-4">
-          <p className="text-white text-center text-lg md:text-xl font-medium drop-shadow-lg bg-black/30 px-4 py-2 rounded-lg inline-block mx-auto block w-fit">
-            {currentImage.caption}
-          </p>
+          <div className="text-white text-left text-lg md:text-xl font-medium drop-shadow-lg bg-black/30 px-4 py-2 rounded-lg inline-block mx-auto block w-fit max-w-full">
+            <p>
+              {isCaptionExpanded || currentImage.caption.length <= 60
+                ? currentImage.caption
+                : `${currentImage.caption.slice(0, 60)}...`}
+            </p>
+            {currentImage.caption.length > 60 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsCaptionExpanded(!isCaptionExpanded);
+                }}
+                className="text-white/70 text-sm mt-1 hover:text-white font-bold"
+              >
+                {isCaptionExpanded ? "show less" : "show more"}
+              </button>
+            )}
+          </div>
         </div>
       )}
 
