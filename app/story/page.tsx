@@ -24,6 +24,7 @@ export default function Story() {
   const [isFinished, setIsFinished] = useState(false);
   const [progressKey, setProgressKey] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const isHoldingRef = useRef(false);
 
   // Fetch configuration
   useEffect(() => {
@@ -81,27 +82,38 @@ export default function Story() {
 
   const handleMouseDown = useCallback(() => {
     if (!isFinished) {
+      isHoldingRef.current = true;
       setIsPaused(true);
     }
-  }, [isFinished, isPaused]);
+  }, [isFinished]);
 
   const handleMouseUp = useCallback(() => {
     if (!isFinished) {
+      isHoldingRef.current = false;
       setIsPaused(false);
     }
-  }, [isFinished, isPaused]);
+  }, [isFinished]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (!isFinished) {
+      isHoldingRef.current = false;
+      setIsPaused(false);
+    }
+  }, [isFinished]);
 
   const handleTouchStart = useCallback(() => {
     if (!isFinished) {
+      isHoldingRef.current = true;
       setIsPaused(true);
     }
-  }, [isFinished, isPaused]);
+  }, [isFinished]);
 
   const handleTouchEnd = useCallback(() => {
     if (!isFinished) {
+      isHoldingRef.current = false;
       setIsPaused(false);
     }
-  }, [isFinished, isPaused]);
+  }, [isFinished]);
 
   if (!config) {
     return (
@@ -120,7 +132,7 @@ export default function Story() {
       onClick={isFinished ? undefined : goToNext}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
