@@ -173,6 +173,15 @@ export default function Story() {
         ))}
       </div>
 
+      {/* Helper text */}
+      {!isFinished && (
+        <div className="absolute top-8 right-2 z-20">
+          <p className="text-white/60 text-xs font-medium drop-shadow-md">
+            tap screen for next pic | press and hold to pause
+          </p>
+        </div>
+      )}
+
       {/* Current image */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
