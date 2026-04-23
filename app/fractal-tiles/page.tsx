@@ -11,7 +11,7 @@ export default function FractalTiles({}) {
       <Tile
         className="div4"
         link="https://github.com/marley/foqus"
-        phrase="Newest project"
+        phrase="Add my chrome extension"
       />
       <Tile
         className="div5"
