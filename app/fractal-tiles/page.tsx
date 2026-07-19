@@ -11,7 +11,7 @@ export default function FractalTiles({}) {
       <Tile
         className="div4"
         link="https://github.com/marley/foqus"
-        phrase="Newest project"
+        phrase="Add my chrome extension"
       />
       <Tile
         className="div5"
@@ -25,8 +25,8 @@ export default function FractalTiles({}) {
       />
       <Tile
         className="div7"
-        link="https://elon.io/"
-        phrase="Current obsession"
+        link="https://www.mozillafoundation.org/en/festival/"
+        phrase="Favorite conference"
       />
     </div>
   );
