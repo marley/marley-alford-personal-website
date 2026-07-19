@@ -36,7 +36,12 @@ export default function Foqus() {
             </div>
 
             <h3 className="text-xl">
-              Browser extension <span className="italic">* coming soon *</span>
+              <a
+                href="https://chromewebstore.google.com/detail/cnilaeoaogbnmmklekcplglklmphjddj?utm_source=item-share-cb"
+                target="_blank"
+              >
+                Add to Chrome
+              </a>
             </h3>
           </div>
         </div>
