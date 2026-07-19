@@ -26,10 +26,11 @@ export default function Hero() {
         >
           teach
         </a>
-        . Currently building a more beneficial music ecosystem @{" "}
-        <a href="https://ohr-fm.vercel.app/" target="_blank">
-          ohr.fm
-        </a>
+        . Currently building simple, intuitive{" "}
+        <ChainText
+          content="professional portfolios"
+          nextContent={`such as <a href="https://www.zackalfordofficial.com/" target="_blank">this</a> and <a href="https://alexeigalar.com/" target="_blank">this</a>`}
+        />
         .{" "}
       </p>
     </div>

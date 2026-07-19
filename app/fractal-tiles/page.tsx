@@ -25,8 +25,8 @@ export default function FractalTiles({}) {
       />
       <Tile
         className="div7"
-        link="https://elon.io/"
-        phrase="Current obsession"
+        link="https://www.mozillafoundation.org/en/festival/"
+        phrase="Favorite conference"
       />
     </div>
   );
