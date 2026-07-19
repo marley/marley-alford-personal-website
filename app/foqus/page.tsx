@@ -1,17 +1,22 @@
 export default function Foqus() {
   return (
-    <div className="p-5 h-screen flex flex-col justify-between">
+    <div className="h-screen w-screen flex flex-col justify-between">
       <div>
         <h1 className="text-4xl font-bold mb-5">Foqus is different.</h1>
         <div className="flex flex-col items-center justify-center mb-5">
-          <video
-            src="/videos/demo1.mp4"
-            controls
-            playsInline
-            className="max-w-4xl rounded-lg"
-          />
+          <div className="max-w-full">
+            <iframe
+              className="border-0"
+              title="Foqus - browser extension"
+              width="560"
+              height="315"
+              src="https://makertube.net/videos/embed/cJhWb87t2KaBmRPTP9MpvZ"
+              allow="fullscreen"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            ></iframe>
+          </div>
           <div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="p-5 w-full grid grid-cols-2 gap-2">
               <div></div>
               <h2 className="text-2xl mb-5">
                 Track your sites of distraction and reshape your browsing
