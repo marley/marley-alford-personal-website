@@ -67,6 +67,17 @@ export default function Story() {
     };
   }, [config, currentIndex, isPaused, isFinished, progressKey]);
 
+  const goToPrev = useCallback(() => {
+    if (!config) return;
+
+    if (currentIndex > 0) {
+      setCurrentIndex((next) => next - 1);
+      setProgressKey((next) => next + 1);
+    } else {
+      setIsPaused(true);
+    }
+  }, [config, currentIndex]);
+
   const goToNext = useCallback(() => {
     if (!config) return;
 
@@ -121,12 +132,25 @@ export default function Story() {
     }
   }, [isFinished]);
 
-  const handleClick = useCallback(() => {
-    if (isFinished || isHoldingRef.current) {
-      return;
-    }
-    goToNext();
-  }, [isFinished, goToNext]);
+  const handleClick = useCallback(
+    (e: React.MouseEvent | React.TouchEvent) => {
+      if (isFinished || isHoldingRef.current) {
+        return;
+      }
+      const clientX =
+        "changedTouches" in e && e.changedTouches.length > 0
+          ? e.changedTouches[0].clientX
+          : "clientX" in e
+            ? e.clientX
+            : window.innerWidth / 2;
+      if (clientX < window.innerWidth / 2) {
+        goToPrev();
+      } else {
+        goToNext();
+      }
+    },
+    [isFinished, goToNext, goToPrev],
+  );
 
   if (!config) {
     return (
